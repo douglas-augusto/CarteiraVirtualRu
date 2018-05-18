@@ -32,7 +32,7 @@
                 android:paddingBottom="16dp"/>
 
             <EditText
-                android:id="@+id/editText_emailAddress"
+                android:id="@+id/campoEmailAlunoLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -56,7 +56,7 @@
                 android:textColorHint="#3384c2"
                 android:textColor="@color/black"
                 android:maxLines="1"
-                android:id="@+id/editText_password"
+                android:id="@+id/campoSenhaLoginAluno"
                 android:inputType="textPassword"
                 android:drawableRight="@drawable/ic_lock_red_400_24dp"
                 android:background="@drawable/bkgrd_redlogin1"
@@ -72,6 +72,7 @@
                 android:background="@drawable/bkgd_red_2"
                 android:clickable="true"
                 android:padding="16dp"
+                android:id="@+id/botaoLogarAluno"
                 android:text=" Entrar"
                 android:textAllCaps="false"
                 android:textColor="#3384c2"

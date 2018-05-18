@@ -100,7 +100,7 @@ public class AlunoCadastrarActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    Toast.makeText(AlunoCadastrarActivity.this, "Erro ao cadastrar usuário: " + erro, Toast.LENGTH_LONG ).show();
+                    Toast.makeText(AlunoCadastrarActivity.this, "Erro ao cadastrar usuário " + erro, Toast.LENGTH_LONG ).show();
                 }
 
             }
