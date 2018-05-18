@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="120dp"
         android:background="@drawable/bkgd_red_2"
         android:clickable="true"
         android:padding="16dp"
@@ -60,5 +60,18 @@
         android:textAllCaps="false"
         android:textColor="#3384c2"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/botaoNovoCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="14dp"
+
+        android:gravity="center"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:text="Desenvolvido por Douglas e Ramyllo - UFPI 2018" />
+
 
 </LinearLayout>
