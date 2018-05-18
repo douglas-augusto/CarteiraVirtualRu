@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainFuncActivity">
+    tools:context=".activity.activity.MainFuncActivity">
 
 </android.support.constraint.ConstraintLayout>

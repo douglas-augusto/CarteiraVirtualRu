@@ -43,6 +43,7 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:maxLines="1"
+        android:textColor="@color/black"
         android:padding="16dp"
         android:textColorHint="@color/colorPrimary" />
 
@@ -54,6 +55,7 @@
         android:hint="Senha"
         android:textColorHint="#3384c2"
         android:maxLines="1"
+        android:textColor="@color/black"
         android:id="@+id/editText_password"
         android:inputType="textPassword"
         android:drawableRight="@drawable/ic_lock_red_400_24dp"
