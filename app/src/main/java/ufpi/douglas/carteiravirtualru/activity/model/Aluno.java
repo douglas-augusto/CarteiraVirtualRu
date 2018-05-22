@@ -12,6 +12,7 @@ public class Aluno {
     private String senha;
     private String curso;
     private String matricula;
+    private int ficha;
 
     public Aluno(){
 
@@ -68,5 +69,13 @@ public class Aluno {
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+
+    public int getFicha() {
+        return ficha;
+    }
+
+    public void setFicha(int ficha) {
+        this.ficha = ficha;
     }
 }

@@ -1,5 +1,6 @@
 package ufpi.douglas.carteiravirtualru.activity.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +31,7 @@ public class AlunoCadastrarActivity extends AppCompatActivity {
     private EditText senha;
     private EditText matricula;
     private EditText curso;
+    private EditText repetirSenha;
     private Button botaoCadastrar;
     private Aluno aluno;
 
@@ -46,18 +48,33 @@ public class AlunoCadastrarActivity extends AppCompatActivity {
         matricula = findViewById(R.id.campoMatricula);
         curso = findViewById(R.id.campoCurso);
         botaoCadastrar = findViewById(R.id.botaoCadastrar);
+        repetirSenha = findViewById(R.id.campoRepetirSenha);
 
 
         botaoCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                aluno = new Aluno();
-                aluno.setNome(nome.getText().toString());
-                aluno.setEmail(email.getText().toString());
-                aluno.setSenha(senha.getText().toString());
-                aluno.setCurso(curso.getText().toString());
-                aluno.setMatricula(matricula.getText().toString());
-                cadastrarAluno();
+                if(nome.getText().toString().isEmpty() || email.getText().toString().isEmpty() || senha.getText().toString().isEmpty() || matricula.getText().toString().isEmpty() || curso.getText().toString().isEmpty() || repetirSenha.getText().toString().isEmpty()){
+                    Toast.makeText(AlunoCadastrarActivity.this, "Todos os campos sao obrigatorios", Toast.LENGTH_LONG ).show();
+                }else if(senha.getText().toString().equals(repetirSenha.getText().toString())){
+                    aluno = new Aluno();
+                    aluno.setNome(nome.getText().toString());
+                    aluno.setEmail(email.getText().toString());
+                    aluno.setSenha(senha.getText().toString());
+                    aluno.setCurso(curso.getText().toString());
+                    aluno.setMatricula(matricula.getText().toString());
+                    final ProgressDialog dialog =
+                            new ProgressDialog(AlunoCadastrarActivity.this);
+                    dialog.setMessage("Cadastrando... aguarde");
+                    dialog.setIndeterminate(false);
+                    dialog.setCanceledOnTouchOutside(true);
+                    dialog.setCancelable(true);
+                    dialog.show();
+                    cadastrarAluno();
+                }else{
+                    Toast.makeText(AlunoCadastrarActivity.this, "As senhas digitadas não são iguais", Toast.LENGTH_LONG ).show();
+                }
+
             }
         });
     }

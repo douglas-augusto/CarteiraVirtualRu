@@ -101,6 +101,21 @@
                 android:textColor="@color/black"
                 android:textColorHint="#3384c2" />
 
+            <EditText
+                android:id="@+id/campoRepetirSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bkgrd_redlogin1"
+                android:drawablePadding="16dp"
+                android:ems="10"
+                android:hint="Repita sua senha"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="#3384c2" />
+
             <Button
                 android:id="@+id/botaoCadastrar"
                 android:layout_width="match_parent"

@@ -1,5 +1,6 @@
 package ufpi.douglas.carteiravirtualru.activity.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -59,10 +60,22 @@ public class AlunoLoginActivity extends AppCompatActivity {
         botaoLogar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                aluno = new Aluno();
-                aluno.setEmail(email.getText().toString());
-                aluno.setSenha(senha.getText().toString());
-                validarLogin();
+                if(email.getText().toString().isEmpty() || senha.getText().toString().isEmpty()){
+                    Toast.makeText(AlunoLoginActivity.this, "Digite seu email e senha!", Toast.LENGTH_LONG ).show();
+                }else{
+                    aluno = new Aluno();
+                    aluno.setEmail(email.getText().toString());
+                    aluno.setSenha(senha.getText().toString());
+                    final ProgressDialog dialog =
+                            new ProgressDialog(AlunoLoginActivity.this);
+                    dialog.setMessage("Carregando... aguarde");
+                    dialog.setIndeterminate(false);
+                    dialog.setCanceledOnTouchOutside(true);
+                    dialog.setCancelable(true);
+                    dialog.show();
+                    validarLogin();
+                }
+
             }
         });
     }
