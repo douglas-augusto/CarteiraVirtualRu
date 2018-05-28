@@ -44,6 +44,8 @@ public class AlunoLoginActivity extends AppCompatActivity {
         //getSupportActionBar().hide();
         setContentView(R.layout.activity_aluno_login);
 
+        verificarUsuarioLogado();
+
         botaoNovoAluno = findViewById(R.id.botaoNovoCadastro);
         email = findViewById(R.id.campoEmailAlunoLogin);
         senha = findViewById(R.id.campoSenhaLoginAluno);
@@ -133,6 +135,14 @@ public class AlunoLoginActivity extends AppCompatActivity {
         Intent intent = new Intent(AlunoLoginActivity.this, MainAlunoActivity.class);
         startActivity( intent );
         finish();
+    }
+
+    private void verificarUsuarioLogado() {
+        autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+        if(autenticacao.getCurrentUser() != null){
+            abrirTelaPrincipal();
+        }
+
     }
 
 }

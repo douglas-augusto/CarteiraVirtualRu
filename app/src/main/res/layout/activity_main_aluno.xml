@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     tools:context=".activity.activity.MainAlunoActivity"
-    android:paddingLeft="25dp"
-    android:paddingRight="25dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
     android:paddingTop="15dp"
     android:orientation="vertical">
 
@@ -15,61 +15,63 @@
         android:id="@+id/textNomeAluno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="16dp"
         android:text="" />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="160dp"
-        android:layout_height="165dp"
-        android:clickable="true"
-        app:cardBackgroundColor="@color/colorPrimary"
-        android:layout_marginTop="260dp" >
+    <TextView
+        android:id="@+id/textMatricula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:text="" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_marginTop="50dp"
-            android:text="MEU QR CODE"
-            android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/textCursoAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:text="" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginBottom="10dp"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_action_barcode_2" />
-    </android.support.v7.widget.CardView>
+    <TextView
+        android:id="@+id/textFichas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:text="" />
 
-    <android.support.v7.widget.CardView
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="-165dp"
-        android:clickable="true"
-        app:cardBackgroundColor="@color/colorPrimary"
-        android:layout_width="160dp"
-        android:layout_height="165dp" >
+    <Button
+        android:id="@+id/botaoComprar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textSize="16dp"
+        android:text="COMPRAR FICHAS" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="3dp"
-            android:layout_gravity="center"
-            android:text="COMPRAR FICHA" />
+    <Button
+        android:id="@+id/botaoQRCode"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="MEU QR CODE" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginRight="3dp"
-            android:layout_marginBottom="10dp"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/ic_payment" />
-    </android.support.v7.widget.CardView>
+    <Button
+        android:id="@+id/botaoDeslogar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="DESLOGAR" />
 
 </LinearLayout>
