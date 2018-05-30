@@ -21,6 +21,7 @@
         <activity android:name=".activity.activity.MainAlunoActivity" />
         <activity android:name=".activity.activity.MainFuncActivity" />
         <activity android:name=".activity.activity.AlunoCadastrarActivity" />
+        <activity android:name=".activity.activity.SeguracaActivity"></activity>
     </application>
 
 </manifest>

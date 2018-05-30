@@ -39,7 +39,7 @@ public class WelcomeActivity extends AppCompatActivity {
         botaoFuncionario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WelcomeActivity.this, FuncLoginActivity.class);
+                Intent intent = new Intent(WelcomeActivity.this, SeguracaActivity.class);
                 startActivity(intent);
             }
         });
