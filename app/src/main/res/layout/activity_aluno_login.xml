@@ -9,27 +9,36 @@
     android:paddingLeft="24dp"
     android:background="#3384c2">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="60dp"
-                android:src="@drawable/ic_account_balance_wallet"
-                android:padding="4dp"
-                />
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="60dp"
+                        android:src="@drawable/ic_account_balance_wallet"
+                        android:padding="4dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Carteira Virtual RU"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="#fff"
                 android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="2dp"
-                android:paddingBottom="16dp"/>
+                android:gravity="center"
+                android:text="Carteira Virtual RU"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/campoEmailAlunoLogin"
@@ -37,7 +46,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/bkgrd_redlogin1"
-                android:textColor="@color/black"
                 android:drawablePadding="16dp"
                 android:drawableRight="@drawable/ic_person_outline_red_400_24dp"
                 android:ems="10"
@@ -45,25 +53,27 @@
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:padding="16dp"
+                android:textColor="@color/black"
                 android:textColorHint="@color/colorPrimary" />
 
             <EditText
+                android:id="@+id/campoSenhaLoginAluno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:padding="16dp"
-                android:hint="Senha"
-                android:textColorHint="#3384c2"
-                android:textColor="@color/black"
-                android:maxLines="1"
-                android:id="@+id/campoSenhaLoginAluno"
-                android:inputType="textPassword"
-                android:drawableRight="@drawable/ic_lock_red_400_24dp"
-                android:background="@drawable/bkgrd_redlogin1"
                 android:layout_marginTop="16dp"
-                android:drawablePadding="16dp"/>
+                android:background="@drawable/bkgrd_redlogin1"
+                android:drawablePadding="16dp"
+                android:drawableRight="@drawable/ic_lock_red_400_24dp"
+                android:ems="10"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="#3384c2" />
 
             <Button
+                android:id="@+id/botaoLogarAluno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -72,21 +82,22 @@
                 android:background="@drawable/bkgd_red_2"
                 android:clickable="true"
                 android:padding="16dp"
-                android:id="@+id/botaoLogarAluno"
                 android:text=" Entrar"
                 android:textAllCaps="false"
                 android:textColor="#3384c2"
                 android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/botaoNovoCadastro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textSize="16dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:clickable="true"
-        android:text="Ainda não tem um cadastro? Clique aqui!" />
+            <TextView
+                android:id="@+id/botaoNovoCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Ainda não tem um cadastro? Clique aqui!"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

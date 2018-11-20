@@ -9,19 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.activity.WelcomeActivity">
+        <activity android:name=".activity.activity.AlunoLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.activity.AlunoLoginActivity" />
-        <activity android:name=".activity.activity.FuncLoginActivity" />
         <activity android:name=".activity.activity.MainAlunoActivity" />
-        <activity android:name=".activity.activity.MainFuncActivity" />
         <activity android:name=".activity.activity.AlunoCadastrarActivity" />
-        <activity android:name=".activity.activity.SeguracaActivity"></activity>
+        <activity android:name=".activity.activity.QRCodeActicity"></activity>
     </application>
 
 </manifest>

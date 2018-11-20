@@ -41,7 +41,6 @@ public class AlunoLoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getSupportActionBar().hide();
         setContentView(R.layout.activity_aluno_login);
 
         verificarUsuarioLogado();
@@ -68,8 +67,7 @@ public class AlunoLoginActivity extends AppCompatActivity {
                     aluno = new Aluno();
                     aluno.setEmail(email.getText().toString());
                     aluno.setSenha(senha.getText().toString());
-                    final ProgressDialog dialog =
-                            new ProgressDialog(AlunoLoginActivity.this);
+                    final ProgressDialog dialog = new ProgressDialog(AlunoLoginActivity.this);
                     dialog.setMessage("Carregando... aguarde");
                     dialog.setIndeterminate(false);
                     dialog.setCanceledOnTouchOutside(true);
@@ -83,7 +81,6 @@ public class AlunoLoginActivity extends AppCompatActivity {
     }
 
     private void validarLogin(){
-
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         autenticacao.signInWithEmailAndPassword(
                 aluno.getEmail(),
@@ -108,7 +105,7 @@ public class AlunoLoginActivity extends AppCompatActivity {
                             Aluno alunoRecuperado = dataSnapshot.getValue( Aluno.class );
 
                             Preferencias preferencias = new Preferencias(AlunoLoginActivity.this);
-                            preferencias.salvarDados( identificadorUsuarioLogado, alunoRecuperado.getNome() );
+                            preferencias.salvarDados( identificadorUsuarioLogado, alunoRecuperado.getEmail() );
 
                         }
 
@@ -137,12 +134,13 @@ public class AlunoLoginActivity extends AppCompatActivity {
         finish();
     }
 
-    private void verificarUsuarioLogado() {
+    public void verificarUsuarioLogado() {
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-        if(autenticacao.getCurrentUser() != null){
+        if (autenticacao.getCurrentUser() != null) {
             abrirTelaPrincipal();
         }
 
     }
+
 
 }

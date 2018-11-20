@@ -47,20 +47,20 @@
         android:textSize="16dp"
         android:text="" />
 
-    <Button
+   <!-- <Button
         android:id="@+id/botaoComprar"
         android:layout_width="match_parent"
         android:layout_marginTop="120dp"
         android:layout_height="70dp"
         android:backgroundTint="@color/colorPrimary"
         android:textSize="16dp"
-        android:text="COMPRAR FICHAS" />
+        android:text="COMPRAR FICHAS" />-->
 
     <Button
         android:id="@+id/botaoQRCode"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="120dp"
         android:textSize="16dp"
         android:backgroundTint="@color/colorPrimary"
         android:text="MEU QR CODE" />
